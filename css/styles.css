@@ -1,0 +1,203 @@
+/* En este archivo escriban su CSS */
+
+/* Fonts */
+/* Importar aquí la font */
+
+@import url('https://fonts.googleapis.com/css2?family=Vujahday+Script&display=swap');
+
+
+
+
+/* Aquí les dejamos como ayuda este "reset" en el cual ajustamos algunas propiedades
+*  cuyos valores asigna por defecto el navegador.
+*/
+
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* Para que el scrolleo en la one page sea suave */
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    line-height: 1.2;
+    background-color: #fbfbfb;
+    color: #0f0f0f;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+p {
+    margin: 16px 0;
+    
+}
+
+img {
+    max-width: 95%;
+    
+}
+
+/* Para quitar los puntos a los items de listas */
+
+
+ul {
+    list-style: none;
+    
+}
+
+/* Para que los enlaces hereden el color de texto y no tengan subrayado */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Este max-width es para que el contenido no se "estire" demasiado hacia los costados y
+*  el margin: auto; para tenerlo centrado fácilmente ;)
+*/
+main {
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    height: 90px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 3px 10px -5px #5f5f5f ;
+    background-color: rgba(0, 102, 102, 0.3);
+}
+
+
+
+ul#menu {
+    display: flex;
+    font-size: 20px;
+    border-radius: 50px;
+}
+
+li.menu-item a {
+    padding: 16px;    
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh;
+    padding-top: 120px;
+}
+
+section#inicio {
+    justify-content: space-around;
+}
+
+figure.inicio-img {
+    margin-bottom: 20px;
+}
+
+figure.inicio-img  img {
+    border-radius: 50%;
+    width: 400px;
+    height: 350px;
+    border: 2px solid #5f5f5f;    
+}
+
+article.inicio {
+    width: 100%;
+}
+
+a.btn {
+    background-color: grey ;
+    color: #fbfbfb;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-size: 20px;
+    display: inline-block;
+}
+
+section#contacto article div {
+    background-color: rgba(102, 178, 255, 0.3);
+    
+}
+
+figure.contacto-icon {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+figure.contacto-icon img {
+    width: 75px;
+    height: 75px;    
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(102, 178, 255, 0.3);
+    color: black;
+    height: 90px;
+    font-size: 15px;
+}
+
+/* Desktop */
+@media(min-width: 1024px) {
+
+    h1 {
+        font-size: 48px;
+        text-align: left;
+    }
+
+    h2 {
+        font-size: 32;
+    }
+    section#inicio {
+        flex-direction: row;        
+    }     
+    
+    article.inicio {
+        width: 50%;
+        text-align: left;
+    }
+
+    ul#contacto {
+        margin: 32px;
+    } 
+}
+
+li.menu-item:hover,
+li.menu-item a.active,
+a.btn:hover{
+    background: rgba(0, 102, 204, 0.3);
+    color: black;
+    transition: background-color 0.3s;
+}
+
+body.change-font {
+    font-family: 'Courier New', Courier, monospace ;
+}
